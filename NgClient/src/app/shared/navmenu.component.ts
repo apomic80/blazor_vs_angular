@@ -13,7 +13,7 @@ import { Component } from '@angular/core';
     <div [ngClass]="{'collapse': collapseNavMenu}" class="@NavMenuCssClass" (click)="toggleNavMenu()">
         <ul class="nav flex-column">
             <li class="nav-item px-3">
-                <a class="nav-link" routerLink="/" routerLinkActive="active">
+                <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
                     <span class="oi oi-home" aria-hidden="true"></span> Home
                 </a>
             </li>
