@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/6d2ce265-418b-4adf-aeec-cd7e61c5f9de/resourceGroups/DotNetConfDemo/providers/Microsoft.Web/sites/blazorangular",
+    "appService.deploySubpath": "Server\\bin\\Release\\net5.0\\publish"
+}

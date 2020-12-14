@@ -4,10 +4,10 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { NavMenuComponent } from './shared/navmenu.component';
-import { CounterComponent } from './pages/counter.component';
-import { FetchDataComponent } from './pages/fetchdata.component';
-import { IndexComponent } from './pages/index.component';
+import { NavMenuComponent } from './shared/navmenu/navmenu.component';
+import { CounterComponent } from './pages/counter/counter.component';
+import { FetchDataComponent } from './pages/fetchdata/fetchdata.component';
+import { IndexComponent } from './pages/index/index.component';
 
 @NgModule({
   declarations: [

@@ -1,0 +1,26 @@
+<div class="top-row pl-4 navbar navbar-dark">
+    <a class="navbar-brand" href="">Angular Client</a>
+    <button class="navbar-toggler" (click)="toggleNavMenu()">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</div>
+
+<div [ngClass]="{'collapse': collapseNavMenu}" class="@NavMenuCssClass" (click)="toggleNavMenu()">
+    <ul class="nav flex-column">
+        <li class="nav-item px-3">
+            <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                <span class="oi oi-home" aria-hidden="true"></span> Home
+            </a>
+        </li>
+        <li class="nav-item px-3">
+            <a class="nav-link" routerLink="/counter" routerLinkActive="active" >
+                <span class="oi oi-plus" aria-hidden="true"></span> Counter
+            </a>
+        </li>
+        <li class="nav-item px-3">
+            <a class="nav-link" href="fetchdata" routerLink="/fetchdata" routerLinkActive="active">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
+            </a>
+        </li>
+    </ul>
+</div>
