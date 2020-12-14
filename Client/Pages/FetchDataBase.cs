@@ -20,6 +20,7 @@ namespace blazor_angular.Client.Pages
         protected override async Task OnInitializedAsync()
         {
             forecasts = await http.GetFromJsonAsync<WeatherForecast[]>("WeatherForecast");
+            Console.WriteLine("Start!");
             sw.Start();
         }
 

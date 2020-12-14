@@ -9,6 +9,7 @@ import { CounterComponent } from './pages/counter/counter.component';
 import { FetchDataComponent } from './pages/fetchdata/fetchdata.component';
 import { IndexComponent } from './pages/index/index.component';
 import { FormsModule } from '@angular/forms';
+import { FetchData2Component } from './pages/fetchdata2/fetchdata2.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { FormsModule } from '@angular/forms';
     NavMenuComponent,
     CounterComponent,
     FetchDataComponent,
+    FetchData2Component,
     IndexComponent
   ],
   imports: [
@@ -25,7 +27,8 @@ import { FormsModule } from '@angular/forms';
     RouterModule.forRoot([
       { path: '', component: IndexComponent },
       { path: 'counter', component: CounterComponent },
-      { path: 'fetchdata', component: FetchDataComponent }
+      { path: 'fetchdata', component: FetchDataComponent },
+      { path: 'fetchdata2', component: FetchData2Component }
     ])
   ],
   providers: [],

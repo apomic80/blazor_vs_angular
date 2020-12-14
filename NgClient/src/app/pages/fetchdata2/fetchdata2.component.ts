@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { WeatherForecast } from './fetchdata.models';
+import { WeatherForecast } from '../fetchdata/fetchdata.models';
 import { environment } from 'src/environments/environment';
 import { NgForm } from '@angular/forms';
 import { MyTimer } from '../../utils/mytimer';
 
 @Component({
-  selector: 'app-fetchdata',
-  templateUrl: 'fetchdata.component.html'
+  selector: 'app-fetchdata2',
+  templateUrl: 'fetchdata2.component.html'
 })
-export class FetchDataComponent implements OnInit {
+export class FetchData2Component implements OnInit {
 
   forecasts: WeatherForecast[] | null = null;
   
