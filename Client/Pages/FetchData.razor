@@ -24,8 +24,7 @@ else
             </tr>
         </thead>
         <tbody>
-            @foreach (var forecast in forecasts)
-            {
+            <Virtualize Context="forecast" Items="@forecasts">
                 <tr>
                     <td colspan="5">
                         <EditForm Model="forecast" OnValidSubmit="() => Save(forecast)" class="form-row text-center">
@@ -51,7 +50,7 @@ else
                         </EditForm>
                     </td>
                 </tr>
-            }
+            </Virtualize>
         </tbody>
     </table>
 }
