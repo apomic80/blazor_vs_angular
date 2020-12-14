@@ -17,5 +17,10 @@ namespace blazor_angular.Client.Pages
         {
             forecasts = await http.GetFromJsonAsync<WeatherForecast[]>("WeatherForecast");
         }
+
+        protected async Task Save(WeatherForecast forecast)
+        {
+            await http.PutAsJsonAsync("WeatherForecast", forecast);
+        }
     }
 }

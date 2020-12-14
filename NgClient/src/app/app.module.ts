@@ -8,6 +8,7 @@ import { NavMenuComponent } from './shared/navmenu/navmenu.component';
 import { CounterComponent } from './pages/counter/counter.component';
 import { FetchDataComponent } from './pages/fetchdata/fetchdata.component';
 import { IndexComponent } from './pages/index/index.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { IndexComponent } from './pages/index/index.component';
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     RouterModule.forRoot([
       { path: '', component: IndexComponent },
       { path: 'counter', component: CounterComponent },

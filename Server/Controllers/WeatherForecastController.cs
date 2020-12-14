@@ -36,5 +36,16 @@ namespace blazor_angular.Server.Controllers
             })
             .ToArray();
         }
+
+        [HttpPut]
+        public IActionResult Put(WeatherForecast forecast)
+        {
+            if(ModelState.IsValid)
+            {
+                // Save data
+                return Ok();
+            }
+            else return BadRequest(ModelState); 
+        }
     }
 }

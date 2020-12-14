@@ -14,20 +14,42 @@ else
     <table class="table">
         <thead>
             <tr>
-                <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
+                <th colspan="5" class="form-row text-center">
+                    <div class="col-2">Date</div>
+                    <div class="col-2">Temp. (C)</div>
+                    <div class="col-2">Temp. (F)</div>
+                    <div class="col-4">Summary</div>
+                    <div class="col-2"></div>
+                </th>
             </tr>
         </thead>
         <tbody>
             @foreach (var forecast in forecasts)
             {
                 <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
+                    <td colspan="5">
+                        <EditForm Model="forecast" OnValidSubmit="() => Save(forecast)" class="form-row text-center">
+                            <DataAnnotationsValidator />
+                            <div class="col-2">
+                                <InputDate @bind-Value="forecast.Date" class="form-control" />
+                                <ValidationMessage For="@(() => forecast.Date)" />
+                            </div>
+                            <div class="col-2">
+                                <InputNumber @bind-Value="forecast.TemperatureC" class="form-control" />
+                                <ValidationMessage For="@(() => forecast.TemperatureC)" />
+                            </div>
+                            <div class="col-2">
+                                @forecast.TemperatureF
+                            </div>
+                            <div class="col-4">
+                                <InputText @bind-Value="forecast.Summary" class="form-control" />
+                                <ValidationMessage For="@(() => forecast.Summary)" />
+                            </div>
+                            <div class="col-2">
+                                <button class="btn btn-warning">Save</button>
+                            </div>
+                        </EditForm>
+                    </td>
                 </tr>
             }
         </tbody>
